@@ -1,5 +1,20 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
+  for (let i = 0; i <= array.length - 1; i++){
+    
+    // let indexForRemoval = i
+
+    // let newArray = [...array].splice(indexForRemoval, 1)
+
+    for (let j = i + 1; j < array.length; j++){
+
+      if (array[i] + array[j] === target){
+        return true
+      } 
+
+    }
+  }
+    return false
 }
 
 /* 
@@ -7,7 +22,12 @@ function hasTargetSum(array, target) {
 */
 
 /* 
-  Add your pseudocode here
+  will need to iterate through the input array by index, add that value to ever other value in the array.
+
+  to narrow in on every other value of the array, I'll need to create a new array but remove the index with the value of i to avoid adding the number to itself.
+
+    if sum = target value, return true
+    if sum != target value, return false
 */
 
 /*
